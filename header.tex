@@ -1,0 +1,51 @@
+\usepackage{etex,datetime,setspace,latexsym,amssymb,amsmath,amsthm}
+\usepackage{fancybox,dialogue,float,wrapfig,enumerate,microtype}
+\usepackage{verbatim,xcolor,multicol,titlesec,tabularx,mdframed}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[pdftex]{hyperref}
+
+\usepackage[margin=2cm,bottom=3cm,footskip=15mm]{geometry}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,trees,positioning,shapes,patterns}
+\usetikzlibrary{intersections, calc, fpu, decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+
+\usepackage[T1]{fontenc} % better fonts
+
+\usepackage{color}
+\definecolor{lightgrey}{gray}{0.35}
+\definecolor{darkgrey}{gray}{0.20}
+% code listings in our own style
+\usepackage{listings}
+\definecolor{lightestyellow}{rgb}{1,1,0.92}
+\definecolor{dkgreen}{rgb}{0,.2,0}
+\definecolor{dkblue}{rgb}{0,0,.2}
+\definecolor{dkyellow}{cmyk}{0,0,.7,.5}
+\definecolor{lightgrey}{gray}{0.4}
+\definecolor{gray}{gray}{0.50}
+\lstset{
+  language        = Haskell,
+  basicstyle      = \scriptsize\ttfamily,
+  keywordstyle    = \color{dkblue},     stringstyle     = \color{red},
+  identifierstyle = \color{dkgreen},    commentstyle    = \color{gray},
+  showspaces      = false,              showstringspaces= false,
+  rulecolor       = \color{gray},       showtabs        = false,
+  tabsize         = 8,                  breaklines      = true,
+  xleftmargin     = 8pt,                xrightmargin    = 8pt,
+  frame           = single,             stepnumber      = 1,
+  aboveskip       = 2pt plus 1pt,
+  belowskip       = 8pt plus 3pt
+}
+\lstnewenvironment{code}[0]{}{}
+% code that is only shown:
+\lstnewenvironment{showCode}[0]{\lstset{numbers=none}}{}
+
+\renewcommand{\phi}{\varphi}
+
+% load hyperref as late as possible for compatibility
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdfborder = {0 0 0}, breaklinks = true }

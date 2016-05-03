@@ -1,0 +1,46 @@
+\documentclass[12pt,a4paper]{article}
+\input{header.tex}
+
+\hypersetup{pdfborder={0 0 0},breaklinks=true,
+  pdftitle=Model Checking the Hardest Logic Puzzle Ever,
+  pdfauthor=Malvin Gattinger}
+
+\title{Model Checking the Hardest Logic Puzzle Ever}
+
+\author{Malvin Gattinger \\ \href{mailto:malvin@w4eg.eu}{malvin@w4eg.eu}}
+
+\date{Last Update: \today}
+
+\parindent0cm
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We implement the logics of Agent Types from \cite{liuWang2013:agentTypesHLPE} in Haskell.
+The resulting program checks various Theorems in fractions of seconds.
+In particular we verify solutions to the so-called Hardest Logic Puzzle Ever.
+
+The implementation is stand-alone, while similar to DEMO-S5 \cite{JvE:DEMO}.
+We make heavy use of Haskell's pattern matching and models are represented explicitly, using a custom data type based on lists.
+\end{abstract}
+
+\vfill
+
+\tableofcontents
+
+\section{Agent-Type Logic}
+\input{AGTYPES.lhs}
+
+\section{Question-Answer Logic}
+\input{QALogic.lhs}
+
+\section{Question-Utterance Logic}
+\input{QULogic.lhs}
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{alpha}
+\bibliography{mchlpe}
+
+\end{document}

@@ -14,3 +14,11 @@ cabal.sandbox.config
 *.aux
 *.hp
 .stack-work/
+*.bib
+*.log
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
+*.toc
+*.out
