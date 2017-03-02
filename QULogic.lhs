@@ -152,8 +152,8 @@ Note that the last clause is not in \cite{liuWang2013:agentTypesHLPE}.
 As usual we interpret common knowledge as the transitive closure of the union of the epistemic relations of a set of agents. Because these relations are represented as partitions we use the \texttt{fusion} function from \cite{JvE2014:EREL}.
 
 \begin{code}
-qIsTrue sc _ (Ask a f g) = qIsTrue sc (Just (a,f)) g
-qIsTrue _        Nothing (Say {}) = error "Nobody asked anything!"
+qIsTrue sc       _       (Ask a f g) = qIsTrue sc (Just (a,f)) g
+qIsTrue _        Nothing Say {}      = error "Nobody asked anything!"
 qIsTrue sc@(m,w) c@(Just (a1,q)) (Say a2 u phi) =
   (a1 == a2) && f `elem` [q,Neg q] && qCanSay sc a1 f
     `implies` qIsTrue (qAnnounce m c a1 u, w) Nothing phi
