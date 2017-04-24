@@ -93,7 +93,7 @@ qIsTrue sc c (Conj fs)   = all (qIsTrue sc c) fs
 qIsTrue (m,w) c (K a f)  = all (\v -> qIsTrue (m,v) c f) (partAtOf (m,w) a)
 qIsTrue sc _ (Ask a f g) = qIsTrue sc (Just (a,f)) g
 
-qIsTrue _ Nothing (Announce{}) = error "Nobody asked anything!"
+qIsTrue _        Nothing         Announce{}        = error "Nobody asked anything!"
 qIsTrue sc@(m,w) c@(Just (a1,q)) (Announce a2 f g) =
   (a1 == a2) && f `elem` [q,Neg q] && qCanSay sc a1 f
     `implies` qIsTrue (qAnnounce m c (Just a1) f, w) Nothing g
@@ -102,13 +102,15 @@ qIsTrue sc@(m,w) c@(Just (a1,q)) (Announce a2 f g) =
 Note that the semantic clause for answers quantifies over all formulas.
 This is not feasible in the implementation as there are infinitely many formulas.
 But we know that only the two formulas which count as an answer, i.e.~the formula representing the question and its negation, are relevant.
-For all other formulas the Announce-Box will be trivially true because.
+For all other formulas the Announce-Box will be trivially true
+\cite[page 138]{liuWang2013:agentTypesHLPE}.
 
 \begin{code}
-qIsTrue sc c (Answer a g) = all (\f -> qIsTrue sc c (Announce a f g)) relevantFormulas where
-  relevantFormulas = case c of
-    Nothing -> []
-    Just (_,q) -> [q,Neg q]
+qIsTrue sc c (Answer a g) =
+  all (\f -> qIsTrue sc c (Announce a f g)) relevantFormulas where
+    relevantFormulas = case c of
+      Nothing -> []
+      Just (_,q) -> [q,Neg q]
 
 qCanSay :: Scene -> AgentName -> QForm -> Bool
 qCanSay sc a f = qIsTrue sc Nothing (agtf a f) where AgT _ agtf = typeAtOf sc a

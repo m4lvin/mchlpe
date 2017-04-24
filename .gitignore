@@ -21,3 +21,5 @@ cabal.sandbox.config
 *.synctex.gz
 *.toc
 *.out
+*.fdb_latexmk
+*.fls
