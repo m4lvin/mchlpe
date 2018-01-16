@@ -22,16 +22,16 @@ are [here](https://w4eg.de/malvin/illc/2016-05-10-mchlpe-talk-darmstadt.pdf).
 [LiuWang2013] Fenrong Liu and Yanjing Wang:
 *Reasoning About Agent Types and the Hardest Logic Puzzle Ever*.
 In: *Minds and Machines* Vol. 23, 2013.
-[doi:10.1007/s11023-012-9287-x](http://dx.doi.org/10.1007/s11023-012-9287-x)
+[doi:10.1007/s11023-012-9287-x](https://doi.org/10.1007/s11023-012-9287-x)
 
 [vEijck2007] Jan van Eijck: *DEMO-S5*.
 Tehnical Report, 2014.
-<http://homepages.cwi.nl/~jve/software/demo_s5/>
+<https://homepages.cwi.nl/~jve/software/demo_s5/>
 
 [Rabern2008] Brian Rabern and Landon Rabern:
 *A Simple Solution to the Hardest Logic Puzzle Ever*.
 In: *Analysis* Vol. 68, 2008.
-[doi:10.1093/analys/68.2.105](http://dx.doi.org/10.1093/analys/68.2.105)
+[doi:10.1093/analys/68.2.105](https://doi.org/10.1093/analys/68.2.105)
 
 
 ## Obligatory XKCDs
