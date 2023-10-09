@@ -13,7 +13,7 @@ represented explicitly, using a custom data type based on lists.
 
 Complete literate Haskell documentation is in [mchlpe.pdf](mchlpe.pdf).
 
-Slides from a talk at [PhDs in Logic VIII](http://www.mathematik.tu-darmstadt.de/fbereiche/logik/phdsinlogic2016)
+Slides from a talk at [PhDs in Logic VIII](https://www2.mathematik.tu-darmstadt.de/~logik/phdsinlogic2016/)
 are [here](https://w4eg.de/malvin/illc/2016-05-10-mchlpe-talk-darmstadt.pdf).
 
 
